@@ -32,9 +32,9 @@ public class CordMove : MonoBehaviour
     private void OnMouseUp()
     {
         if (socket != null && socket.chosen)
-            if (socket.name == "Socket")
+            if (socket.name == "Socket 1")
                 SceneManager.LoadScene(2);
-            else
+            else if (socket.name == "Socket 2")
                 SceneManager.LoadScene(3);
     }
 }
