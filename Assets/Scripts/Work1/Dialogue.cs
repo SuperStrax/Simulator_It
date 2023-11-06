@@ -19,9 +19,9 @@ public class Dialogue : MonoBehaviour
 
     public void Start()
     {
-        textDialog.text = message[0];
-        headText .text = header[0];
-        character.overrideSprite = characters[0];
+        textDialog.text = message[numberDialog];
+        headText .text = header[numberDialog];
+        character.overrideSprite = characters[numberDialog];
     }
 
     public void NextDialog()
