@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -26,15 +27,19 @@ public class Dialogue : MonoBehaviour
 
     public void NextDialog()
     {
-        if (numberDialog == message.Length - 1)
+        try
+        {
+            numberDialog++;
+            if (characters[numberDialog].name == "UIMask") character.color = new Color(0, 0, 0, 150);
+            else character.color = new Color(255, 255, 255, 255);
+            textDialog.text = message[numberDialog];
+            headText.text = header[numberDialog];
+            character.overrideSprite = characters[numberDialog];
+        }
+        catch (IndexOutOfRangeException)
         {
             Destroy(windowDialogue);
+            throw;
         }
-        numberDialog++;
-        textDialog.text = message[numberDialog];
-        headText.text = header[numberDialog];
-        character.overrideSprite = characters[numberDialog];
-        if (characters[numberDialog].name == "UIMask") character.color = new Color(0, 0, 0, 150);
-        else character.color = new Color(0, 0, 0, 255);
     }
 }
