@@ -6,15 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Work 1/Scene 1.unity
+    path: Assets/Scenes/Egor 's work/Work 1/Scene 1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Work 1/Scene 2.unity
+    path: Assets/Scenes/Egor 's work/Work 1/Scene 2.unity
     guid: 3650db56467c6d549883af1e84fe54e0
   - enabled: 1
-    path: Assets/Scenes/Work 1/Scene 4.unity
+    path: Assets/Scenes/Egor 's work/Work 1/Scene 4.unity
     guid: a462f71f77579854b9fab6052df1ab0f
   - enabled: 1
-    path: Assets/Scenes/Work 1/Scene 3.unity
+    path: Assets/Scenes/Egor 's work/Work 1/Scene 3.unity
     guid: f26d4f042cf803d44aa2c8d562075f0d
+  - enabled: 1
+    path: Assets/Scenes/Egor 's work/Work 2/Scene 1.unity
+    guid: fb36d33c961512e44a89193ee03cabc0
+  - enabled: 1
+    path: Assets/Scenes/Egor 's work/Work 2/Scene 2.unity
+    guid: e88d93b0a5ae6a44b9c630d4c1acd949
+  - enabled: 1
+    path: Assets/Scenes/Egor 's work/Work 3/Scene 1.unity
+    guid: f74917cc39ecc5c47a5a5ab84f7671a1
+  - enabled: 1
+    path: Assets/Scenes/Egor 's work/Work 3/Scene 2.unity
+    guid: d700b427ddc371c4fb5d41d238aace37
   m_configObjects: {}
