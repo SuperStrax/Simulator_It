@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &42516032 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3817446683148332119, guid: 7ace6a6479b2a1e45bcd82c0f1a44f58, type: 3}
+  m_PrefabInstance: {fileID: 1996256255}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &52593820
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,12 +613,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1237853345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80e9cfe239f6d664291a7a226008164b, type: 3}
+  m_Script: {fileID: 11500000, guid: cf6741dc39a7e274e98296d9e0efcb26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   chosen: 1
   breakRouter: {fileID: 1531109185}
   warning: {fileID: 367313615}
+  dialogue: {fileID: 42516032}
 --- !u!61 &1237853350
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -621,7 +627,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237853345}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -848,10 +854,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1531109181}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3730d1d56841e734e9a3470fb42ab0f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a59b1f599b7584429607e7ecd71ace2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   selected: 0
+  dialogue: {fileID: 42516032}
+  button: {fileID: 1531109186}
 --- !u!114 &1531109186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -859,7 +867,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531109181}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -897,7 +905,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1531109185}
-        m_TargetAssemblyTypeName: DeleteBreakRouter, Assembly-CSharp
+        m_TargetAssemblyTypeName: BreakRouterController, Assembly-CSharp
         m_MethodName: Click
         m_Mode: 1
         m_Arguments:
@@ -1149,12 +1157,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1747560955}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80e9cfe239f6d664291a7a226008164b, type: 3}
+  m_Script: {fileID: 11500000, guid: cf6741dc39a7e274e98296d9e0efcb26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   chosen: 0
   breakRouter: {fileID: 1531109185}
   warning: {fileID: 367313615}
+  dialogue: {fileID: 42516032}
 --- !u!61 &1747560960
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1162,7 +1171,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747560955}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1314,12 +1323,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1874842001}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80e9cfe239f6d664291a7a226008164b, type: 3}
+  m_Script: {fileID: 11500000, guid: cf6741dc39a7e274e98296d9e0efcb26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   chosen: 0
   breakRouter: {fileID: 1531109185}
   warning: {fileID: 367313615}
+  dialogue: {fileID: 42516032}
 --- !u!61 &1874842006
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1327,7 +1337,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874842001}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:

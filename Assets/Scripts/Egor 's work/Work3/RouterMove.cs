@@ -11,6 +11,7 @@ public class RouterMove : MonoBehaviour
     public bool chosen;
     public BreakRouterController breakRouter;
     public Dialogue warning;
+    public GameObject dialogue;
 
     private void Start()
     {
@@ -41,5 +42,10 @@ public class RouterMove : MonoBehaviour
             if (chosen) SceneManager.LoadScene(7);
             else warning.gameObject.SetActive(true);
         }
+    }
+
+    private void Update()
+    {
+       if (dialogue == null) this.GetComponent<BoxCollider2D>().enabled = true; 
     }
 }
