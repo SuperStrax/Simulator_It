@@ -25,13 +25,17 @@ public class Dialogue : MonoBehaviour
         character.overrideSprite = characters[numberDialog];
     }
 
+    private void Update()
+    {
+        if (characters[numberDialog].name == "UIMask") character.color = new Color(0, 0, 0, 150);
+        else character.color = new Color(255, 255, 255, 255);
+    }
+
     public void NextDialog()
     {
         try
         {
             numberDialog++;
-            if (characters[numberDialog].name == "UIMask") character.color = new Color(0, 0, 0, 150);
-            else character.color = new Color(255, 255, 255, 255);
             textDialog.text = message[numberDialog];
             headText.text = header[numberDialog];
             character.overrideSprite = characters[numberDialog];

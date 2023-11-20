@@ -33,12 +33,12 @@ public class ScrewdriverMove : MonoBehaviour
     private void OnMouseUp()
     {
             this.transform.position = startPosition;
-            if (pin != null && pin.tag == "Pin" && repairController.wireConnected < 2)
+            if (pin != null && pin.tag == "Pin" && repairController.wireConnected < 2 && pin.GetComponent<Image>().enabled)
             {
                 pin.GetComponent<Image>().enabled = false;
                 pinCount++;
             }
-            else if (pin != null && pin.tag == "Pin" && repairController.wireConnected == 2)
+            else if (pin != null && pin.tag == "Pin" && repairController.wireConnected == 2 && !pin.GetComponent<Image>().enabled)
             {
                 pin.GetComponent<Image>().enabled = true;
                 pinCount--;
