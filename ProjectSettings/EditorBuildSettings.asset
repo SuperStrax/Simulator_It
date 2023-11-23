@@ -41,4 +41,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Egor 's work/Work 5/Scene 2.unity
     guid: 25760fd85e5cb524a94dd8069933e5bd
+  - enabled: 1
+    path: Assets/Scenes/Nikita's work/Work 1/Scene 1.unity
+    guid: 9486c0af07338884f9999efa06ef26ea
+  - enabled: 1
+    path: Assets/Scenes/Nikita's work/Work 1/Scene 2.unity
+    guid: 5c21424b36ae3d84a8119f8a3861026a
+  - enabled: 1
+    path: Assets/Scenes/Nikita's work/Work 1/Scene 3.unity
+    guid: dda0d8c2dc601914a8ae83d20c24a609
   m_configObjects: {}
