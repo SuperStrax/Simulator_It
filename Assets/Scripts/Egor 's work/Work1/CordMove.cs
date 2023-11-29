@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -33,8 +31,8 @@ public class CordMove : MonoBehaviour
     {
         if (socket != null && socket.chosen)
             if (socket.name == "Socket 1")
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(5);
             else if (socket.name == "Socket 2")
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene(4);
     }
 }

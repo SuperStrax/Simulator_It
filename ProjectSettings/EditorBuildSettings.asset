@@ -6,57 +6,66 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: e870e9448e5c37b4fb1866d9a6298af9
+  - enabled: 1
+    path: Assets/Scenes/ProfessionChoice.unity
+    guid: b825eb298ef9aaf47ac61ae29de6da88
+  - enabled: 1
     path: Assets/Scenes/Egor 's work/Work 1/Scene 1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Egor 's work/Work 1/Scene 2.unity
     guid: 3650db56467c6d549883af1e84fe54e0
   - enabled: 1
-    path: Assets/Scenes/Egor 's work/Work 1/Scene 4.unity
-    guid: a462f71f77579854b9fab6052df1ab0f
-  - enabled: 1
     path: Assets/Scenes/Egor 's work/Work 1/Scene 3.unity
     guid: f26d4f042cf803d44aa2c8d562075f0d
+  - enabled: 1
+    path: Assets/Scenes/Egor 's work/Work 1/Scene 4.unity
+    guid: a462f71f77579854b9fab6052df1ab0f
   - enabled: 1
     path: Assets/Scenes/Egor 's work/Work 2/Scene 1.unity
     guid: fb36d33c961512e44a89193ee03cabc0
   - enabled: 1
     path: Assets/Scenes/Egor 's work/Work 2/Scene 2.unity
     guid: e88d93b0a5ae6a44b9c630d4c1acd949
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Egor 's work/Work 3/Scene 1.unity
     guid: f74917cc39ecc5c47a5a5ab84f7671a1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Egor 's work/Work 3/Scene 2.unity
     guid: d700b427ddc371c4fb5d41d238aace37
-  - enabled: 1
-    path: Assets/Scenes/Egor 's work/Work 4/Scene 2.unity
-    guid: 426711b00dc8bdc4ba7b473b653fccfb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Egor 's work/Work 4/Scene 1.unity
     guid: 94876806ed5c0444fa2635b1191cff93
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Egor 's work/Work 5/Scene 1.unity
     guid: 7377eba18ae96c34dbb2828a06352727
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Egor 's work/Work 5/Scene 2.unity
     guid: 25760fd85e5cb524a94dd8069933e5bd
-  - enabled: 1
+  - enabled: 0
+    path: Assets/Scenes/Irina's work/Work 1/Scene 1.unity
+    guid: 5fd92cf03c408c94bb2113fe756621c7
+  - enabled: 0
     path: Assets/Scenes/Nikita's work/Work 1/Scene 1.unity
     guid: 9486c0af07338884f9999efa06ef26ea
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nikita's work/Work 1/Scene 2.unity
     guid: 5c21424b36ae3d84a8119f8a3861026a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nikita's work/Work 1/Scene 3.unity
     guid: dda0d8c2dc601914a8ae83d20c24a609
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nikita's work/Work 2/Scene 1.unity
     guid: dac124d1f28e78a4ea9bcbf395da2026
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nikita's work/Work 2/Scene 2.unity
     guid: 2df9148507b8e764c8cdd977949c664f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nikita's work/Work 2/Scene 3.unity
     guid: c341d09d917943c45b62fcc84164ac1b
+  - enabled: 0
+    path: Assets/Scenes/Nikita's work/Work 3/Scene 1.unity
+    guid: ae25a0ac196b4794aa5a675754959b84
   m_configObjects: {}
