@@ -9,6 +9,7 @@ public class IconMove : MonoBehaviour
     Vector2 startPosition;
     public GameObject iconOnTable;
     bool onTable;
+    public GameObject dialogue;
 
     private void Start()
     {
@@ -24,19 +25,22 @@ public class IconMove : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (GetMousePosition().x > -3.9 && GetMousePosition().x < 5.5 && GetMousePosition().y < 3.9 && GetMousePosition().y > -0.6)
+        if (dialogue == null)
         {
-            rb.MovePosition(GetMousePosition());
-            if ((GetMousePosition().x > -2.4 && GetMousePosition().x < 3.8) && (GetMousePosition().y < 3.6 && GetMousePosition().y > 0))
+            if (GetMousePosition().x > -3.9 && GetMousePosition().x < 5.5 && GetMousePosition().y < 3.9 && GetMousePosition().y > -0.6)
             {
-                iconOnTable.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
-                onTable = false;
-            }
+                rb.MovePosition(GetMousePosition());
+                if ((GetMousePosition().x > -2.4 && GetMousePosition().x < 3.8) && (GetMousePosition().y < 3.6 && GetMousePosition().y > 0))
+                {
+                    iconOnTable.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+                    onTable = false;
+                }
 
-            else
-            {
-                iconOnTable.GetComponent<Image>().color = new Color32(255, 255, 255, 100);
-                onTable = true;
+                else
+                {
+                    iconOnTable.GetComponent<Image>().color = new Color32(255, 255, 255, 100);
+                    onTable = true;
+                }
             }
         }
     }
@@ -53,6 +57,14 @@ public class IconMove : MonoBehaviour
         {
             this.transform.position = startPosition;
             iconOnTable.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+        }
+    }
+
+    private void Update()
+    {
+        if (dialogue == null)
+        {
+            this.GetComponent<Button>().enabled = true;
         }
     }
 }

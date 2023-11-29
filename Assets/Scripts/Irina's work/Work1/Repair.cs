@@ -10,33 +10,41 @@ public class Repair : MonoBehaviour
     public Button[] notCorrectElements;
     public Image repairColor;
     public bool chosen;
+    public GameObject warning;
+    public GameObject ending;
 
     public void RepairStart()
     {
-        if (!isWorking)
+        if (!warning.activeInHierarchy)
         {
-            isWorking = true;
-            repairColor.color = new Color32(70, 84, 150, 140);
-            foreach (Button button in notCorrectElements)
+            if (!isWorking)
             {
-                button.enabled = true;
+                isWorking = true;
+                repairColor.color = new Color32(70, 84, 150, 140);
+                foreach (Button button in notCorrectElements)
+                {
+                    button.enabled = true;
+                }
             }
-        }
-        else
-        {
-            isWorking = false;
-            repairColor.color = new Color32(70, 84, 150, 0);
-            foreach (Button button in notCorrectElements)
+            else
             {
-                button.enabled = false;
+                isWorking = false;
+                repairColor.color = new Color32(70, 84, 150, 0);
+                foreach (Button button in notCorrectElements)
+                {
+                    button.enabled = false;
+                }
             }
         }
     }
 
     public void RepairElement()
     {
-        correctElement.SetActive(true);
-        this.gameObject.SetActive(false);
+        if (!warning.activeInHierarchy)
+        {
+            correctElement.SetActive(true);
+            this.gameObject.SetActive(false);
+        }
     }
 
     public void OnMouseEnter()
@@ -52,6 +60,22 @@ public class Repair : MonoBehaviour
         if (chosen && repairColor.color == new Color32(70, 84, 150, 140))
         {
             this.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+        }
+    }
+
+    public void Save()
+    {
+        if (!warning.activeInHierarchy)
+        {
+            foreach (Button button in notCorrectElements)
+            {
+                if (button.gameObject.activeInHierarchy)
+                {
+                    warning.SetActive(true);
+                    return;
+                }
+            }
+            ending.SetActive(true);
         }
     }
 }
