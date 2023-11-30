@@ -1023,6 +1023,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6155901439465567193}
   - component: {fileID: 1361330699471785377}
+  - component: {fileID: 8499886976853879666}
   m_Layer: 5
   m_Name: VideoPlayer
   m_TagString: Untagged
@@ -1079,12 +1080,25 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
-  m_Looping: 0
-  m_WaitForFirstFrame: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
+--- !u!114 &8499886976853879666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3096921574219065539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d96955d5899bac4db3d5ff5ebb8d6bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoFileName: Tech1.mp4
 --- !u!1 &3259837974494861583
 GameObject:
   m_ObjectHideFlags: 0

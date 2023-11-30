@@ -487,6 +487,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1361330699471785377, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
+      propertyPath: m_Url
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2625317980651591288, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
       propertyPath: m_text
       value: "\u041F\u043E\u0434\u043E\u0439\u0434\u0438\u0442\u0435 \u043A \u0441\u0438\u0441\u0442\u0435\u043C\u043D\u043E\u043C\u0443
@@ -607,6 +611,10 @@ PrefabInstance:
     - target: {fileID: 8051501350179549081, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
       propertyPath: m_Name
       value: Interface
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499886976853879666, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
+      propertyPath: videoFileName
+      value: Tech5.mp4
       objectReference: {fileID: 0}
     - target: {fileID: 9051466420938709411, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
       propertyPath: m_AnchoredPosition.y

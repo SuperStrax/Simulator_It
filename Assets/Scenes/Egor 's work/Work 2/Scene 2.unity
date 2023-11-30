@@ -1209,6 +1209,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1361330699471785377, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
+      propertyPath: m_Url
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2625317980651591288, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
       propertyPath: m_text
       value: "\u041E\u0431\u0440\u0430\u0442\u0438\u0442\u0435 \u0432\u043D\u0438\u043C\u0430\u043D\u0438\u0435
@@ -1315,6 +1319,10 @@ PrefabInstance:
     - target: {fileID: 8051501350179549081, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
       propertyPath: m_Name
       value: Interface
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499886976853879666, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
+      propertyPath: videoFileName
+      value: Tech2.mp4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
