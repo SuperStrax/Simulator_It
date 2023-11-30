@@ -28,7 +28,7 @@ public class RepairController : MonoBehaviour
         }
 
         if (wireConnected == 2 && screwdriver.GetComponent<ScrewdriverMove>().pinCount == 0)
-            SceneManager.LoadScene(9);
+            SceneManager.LoadScene(11);
     }
 
     public void capRemove()

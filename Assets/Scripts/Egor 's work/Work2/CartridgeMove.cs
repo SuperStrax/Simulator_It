@@ -7,6 +7,7 @@ public class CartridgeMove : MonoBehaviour
     public bool chosen;
     public GameObject printer;
     public Dialogue dialogue;
+    public InterfaceController interfaceController;
 
     private void Start()
     {
@@ -33,6 +34,7 @@ public class CartridgeMove : MonoBehaviour
                 dialogue.numberDialog = 1;
                 printer.GetComponent<CartridgeInsert>().cartridgeDelete();
                 dialogue.gameObject.SetActive(true);
+                interfaceController.badEnding = true;
             }
         }
         else if (!this.chosen)

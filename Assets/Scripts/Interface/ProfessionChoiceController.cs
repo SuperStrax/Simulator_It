@@ -27,11 +27,11 @@ public class ProfessionChoiceController : MonoBehaviour
 
     public void programmerStart()
     {
-        SceneManager.LoadScene(13);
+        SceneManager.LoadScene(14);
     }
 
     public void sysAdminStart()
     {
-        SceneManager.LoadScene(14);
+        SceneManager.LoadScene(15);
     }
 }

@@ -43,4 +43,9 @@ public class Dialogue : MonoBehaviour
             throw;
         }
     }
+
+    public void Ending()
+    {
+        Destroy(gameObject);
+    }
 }

@@ -24,6 +24,6 @@ public class IntroController : MonoBehaviour
 
     public void Zoom()
     {
-        SceneManager.LoadScene(11);
+        SceneManager.LoadScene(13);
     }
 }

@@ -6,7 +6,7 @@ public class Zoom2 : MonoBehaviour
 {
    public void Click()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(7);
     }
 
     public Button button1;

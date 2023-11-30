@@ -8,7 +8,7 @@ public class Zoom3 : MonoBehaviour
 
     public void Click()
     {
-        SceneManager.LoadScene(13);
+        SceneManager.LoadScene(16);
     }
 
     private void Update()

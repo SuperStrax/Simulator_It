@@ -6,10 +6,12 @@ public class InterfaceController : MonoBehaviour
     public GameObject skipButton;
     public GameObject hintButton;
     public int nextLevel;
+    public int thisLevel;
     public GameObject final;
     public bool finalScene;
     public GameObject nextLevelButton;
     public bool badEnding;
+    public GameObject restartLevel;
 
     void Start()
     {
@@ -30,13 +32,24 @@ public class InterfaceController : MonoBehaviour
         SceneManager.LoadScene(nextLevel);
     }
 
+    public void Restart()
+    {
+        SceneManager.LoadScene(thisLevel);
+    }
+
     private void Update()
     {
         if (final == null && finalScene)
         {
-            nextLevelButton.SetActive(true);
             if (badEnding)
+            {
                 skipButton.SetActive(true);
+                restartLevel.SetActive(true);
+            }
+            else
+            {
+                nextLevelButton.SetActive(true);
+            }
         }
     }
 }

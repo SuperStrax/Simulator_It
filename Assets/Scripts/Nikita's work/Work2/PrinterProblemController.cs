@@ -11,13 +11,13 @@ public class PrinterProblemController : MonoBehaviour
 
     public void PrinterZoom()
     {
-        SceneManager.LoadScene(16);
+        SceneManager.LoadScene(19);
         changeScene = true;
     }
 
     public void MonitorZoom()
     {
-        SceneManager.LoadScene(17);
+        SceneManager.LoadScene(20);
         changeScene = true;
     }
 

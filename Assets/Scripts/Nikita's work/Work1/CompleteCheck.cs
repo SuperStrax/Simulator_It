@@ -8,6 +8,6 @@ public class CompleteCheck : MonoBehaviour
     private void Update()
     {
         if (connectCount == 4)
-            SceneManager.LoadScene(14);
+            SceneManager.LoadScene(17);
     }
 }

@@ -36,7 +36,7 @@ public class RouterMove : MonoBehaviour
     {
         if (breakRouter.selected && !breakRouter.GetComponent<Image>().enabled)
         {
-            if (chosen) SceneManager.LoadScene(7);
+            if (chosen) SceneManager.LoadScene(9);
             else warning.gameObject.SetActive(true);
         }
     }
