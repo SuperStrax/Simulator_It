@@ -80,4 +80,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Irina's work/Work 4/Scene 1.unity
     guid: 9613e9304053db748bd39b057ff31be1
+  - enabled: 1
+    path: Assets/Scenes/Irina's work/Work 5/Scene 1.unity
+    guid: 99042204535093548bf7d034d79a8439
   m_configObjects: {}
