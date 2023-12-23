@@ -14,11 +14,13 @@ public class Dialogue : MonoBehaviour
     public string[] header;
     public Sprite[] characters;
     public int numberDialog = 0;
+    public GameObject backround;
+    public GameObject smallBackround;
 
     public void Start()
     {
         textDialog.text = message[numberDialog];
-        headText .text = header[numberDialog];
+        headText .text = "[" + header[numberDialog] + "]";
         character.overrideSprite = characters[numberDialog];
     }
 
@@ -26,6 +28,17 @@ public class Dialogue : MonoBehaviour
     {
         if (characters[numberDialog].name == "UIMask") character.color = new Color(0, 0, 0, 150);
         else character.color = new Color(255, 255, 255, 255);
+
+        if (message[numberDialog].Length < 50)
+        {
+            smallBackround.SetActive(true);
+            backround.SetActive(false);
+        }
+        else
+        {
+            smallBackround.SetActive(false);
+            backround.SetActive(true);
+        }
     }
 
     public void NextDialog()
@@ -34,7 +47,7 @@ public class Dialogue : MonoBehaviour
         {
             numberDialog++;
             textDialog.text = message[numberDialog];
-            headText.text = header[numberDialog];
+            headText.text = "[" + header[numberDialog] + "]";
             character.overrideSprite = characters[numberDialog];
         }
         catch (IndexOutOfRangeException)
