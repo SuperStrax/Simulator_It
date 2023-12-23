@@ -2819,6 +2819,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4468242476229622245, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
+      propertyPath: nextLevel
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468242476229622245, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
       propertyPath: thisLevel
       value: 23
       objectReference: {fileID: 0}
@@ -3013,6 +3017,12 @@ MonoBehaviour:
   - {fileID: 1223372621}
   - {fileID: 47618517}
   - {fileID: 1786060733}
+  interactiveElements:
+  - {fileID: 1553911097}
+  - {fileID: 1036712496}
+  - {fileID: 278353496}
+  - {fileID: 1874187546}
+  - {fileID: 609791413}
 --- !u!114 &1358807824
 MonoBehaviour:
   m_ObjectHideFlags: 0
