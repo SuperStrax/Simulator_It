@@ -5019,6 +5019,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1419894246}
     - target: {fileID: 4468242476229622245, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
+      propertyPath: nextLevel
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468242476229622245, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
       propertyPath: thisLevel
       value: 26
       objectReference: {fileID: 0}
