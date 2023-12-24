@@ -1144,6 +1144,22 @@ PrefabInstance:
         \u043F\u0440\u0438\u043A\u0440\u0443\u0442\u0438\u0442\u0435 \u043E\u0431\u0440\u0430\u0442\u043D\u043E
         \u0448\u0443\u0440\u0443\u043F\u044B."
       objectReference: {fileID: 0}
+    - target: {fileID: 2625317980651591288, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2625317980651591288, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
+      propertyPath: m_margin.z
+      value: 74.88278
+      objectReference: {fileID: 0}
+    - target: {fileID: 2625317980651591288, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2625317980651591288, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 4468242476229622245, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
       propertyPath: final
       value: 

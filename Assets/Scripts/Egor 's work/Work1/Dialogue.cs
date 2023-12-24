@@ -20,7 +20,8 @@ public class Dialogue : MonoBehaviour
     public void Start()
     {
         textDialog.text = message[numberDialog];
-        headText .text = "[" + header[numberDialog] + "]";
+        headText .text = header[numberDialog];
+        ColorName();
         character.overrideSprite = characters[numberDialog];
     }
 
@@ -41,13 +42,63 @@ public class Dialogue : MonoBehaviour
         }
     }
 
+    void ColorName()
+    {
+        switch(headText.text)
+        {
+            case "Оксана":
+                headText.color = new Color32(213, 138, 148, 255);
+                break;
+            case "Зинаида":
+                headText.color = new Color32(185, 162, 129, 255);
+                break;
+            case "Глеб":
+                headText.color = new Color32(250, 167, 108, 255);
+                break;
+            case "Виктор":
+                headText.color = new Color32(175, 11, 9, 255);
+                break;
+            case "Юлия Дмитриевна":
+                headText.color = new Color32(166, 202, 240, 255);
+                break;
+            case "Дмитрий Владимирович":
+                headText.color = new Color32(181, 156, 255, 255);
+                break;
+            case "Игорь Вольфович":
+                headText.color = new Color32(98, 99, 155, 255);
+                break;
+            case "Кристина Юрьевна":
+                headText.color = new Color32(250, 167, 108, 255);
+                break;
+            case "Анна":
+                headText.color = new Color32(213, 138, 148, 255);
+                break;
+            case "Дмитрий":
+                headText.color = new Color32(181, 156, 255, 255);
+                break;
+            case "Антон":
+                headText.color = new Color32(98, 99, 155, 255);
+                break;
+            case "Максим":
+                headText.color = new Color32(166, 202, 240, 255);
+                break;
+            case "Егор":
+            case "Ирина":
+            case "Никита":
+            case "Задание":
+                headText.color = Color.gray;
+                break;
+        }
+    }
+
     public void NextDialog()
     {
         try
         {
             numberDialog++;
             textDialog.text = message[numberDialog];
-            headText.text = "[" + header[numberDialog] + "]";
+            headText.text = header[numberDialog];
+            ColorName();
             character.overrideSprite = characters[numberDialog];
         }
         catch (IndexOutOfRangeException)
