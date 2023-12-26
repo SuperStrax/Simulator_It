@@ -24,6 +24,9 @@ public class MapComplete : MonoBehaviour
                  && entrance.activeInHierarchy && rhino.activeInHierarchy && birds.activeInHierarchy)
             {
                 complete.SetActive(true);
+                Progress.Instance.progLevelsComplete[4] = true;
+                Progress.Instance.techStat = Progress.Instance.progStatCalc();
+                Progress.Instance.SaveStat();
             }
             else
             {

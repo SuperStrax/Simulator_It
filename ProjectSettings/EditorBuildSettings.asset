@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: e870e9448e5c37b4fb1866d9a6298af9
+    path: Assets/Scenes/StartMenu.unity
+    guid: c17fe46a841ee4d4d890f335a55fcdf5
   - enabled: 1
     path: Assets/Scenes/ProfessionChoice.unity
     guid: b825eb298ef9aaf47ac61ae29de6da88
@@ -89,4 +89,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nikita's work/Work 5/Scene 1.unity
     guid: fa30baff5c365ab4ab4889ad0de4f7a8
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: e870e9448e5c37b4fb1866d9a6298af9
   m_configObjects: {}

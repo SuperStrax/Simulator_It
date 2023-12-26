@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using System;
 using UnityEngine.SceneManagement;
 
 public class ProfessionChoiceController : MonoBehaviour
@@ -9,15 +8,14 @@ public class ProfessionChoiceController : MonoBehaviour
     public TextMeshProUGUI progStat;
     public TextMeshProUGUI sysStat;
 
-    int techStatCount = 0;
-    int progStatCount = 0;
-    int sysStatCount = 0;
-
     private void Start()
     {
-        techStat.text = Convert.ToString(techStatCount) + "/5";
-        progStat.text = Convert.ToString(progStatCount) + "/5";
-        sysStat.text = Convert.ToString(sysStatCount) + "/5";
+        StartCoroutine(Progress.Instance.GetPlayerId());
+        Progress.Instance.GetPlayerId();
+        Progress.Instance.LoadStat();
+        techStat.text = Progress.Instance.techStat + "/5";
+        progStat.text = Progress.Instance.progStat + "/5";
+        sysStat.text = Progress.Instance.sysStat + "/5";
     }
 
     public void techinicianStart()

@@ -31,6 +31,11 @@ public class ProcessorRepairController : MonoBehaviour
     private void Update()
     {
         if (screwdriver.pinCount == 0 && processorSmeared)
+        {
             complete.SetActive(true);
+            Progress.Instance.techLevelsComplete[4] = true;
+            Progress.Instance.techStat = Progress.Instance.techStatCalc();
+            Progress.Instance.SaveStat();
+        }
     }
 }

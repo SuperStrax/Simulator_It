@@ -5,7 +5,7 @@ public class PauseMenuController : MonoBehaviour
 {
     public void MainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(28);
     }
 
     public void FullScreen()

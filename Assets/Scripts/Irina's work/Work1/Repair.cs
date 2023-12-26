@@ -74,6 +74,9 @@ public class Repair : MonoBehaviour
                 }
             }
             ending.SetActive(true);
+            Progress.Instance.progLevelsComplete[0] = true;
+            Progress.Instance.techStat = Progress.Instance.progStatCalc();
+            Progress.Instance.SaveStat();
         }
     }
 }

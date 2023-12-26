@@ -9,6 +9,7 @@ TagManager:
   - Connector
   - Crimper
   - Place
+  - Backend
   layers:
   - Default
   - TransparentFX

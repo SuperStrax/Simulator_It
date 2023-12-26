@@ -28,7 +28,12 @@ public class RepairController : MonoBehaviour
         }
 
         if (wireConnected == 2 && screwdriver.GetComponent<ScrewdriverMove>().pinCount == 0)
+        {
             SceneManager.LoadScene(11);
+            Progress.Instance.techLevelsComplete[3] = true;
+            Progress.Instance.techStat = Progress.Instance.techStatCalc();
+            Progress.Instance.SaveStat();
+        }
     }
 
     public void capRemove()

@@ -7,8 +7,9 @@ public class MainMenuController : MonoBehaviour
     public TextMeshProUGUI welcome;
     string playerName = "UnnamedPlayer";
 
-    private void Start()
+    public void Awake()
     {
+        playerName = GameLoginControler.LoginController.username;
         welcome.text = "Здравствуй, " + playerName;
     }
 

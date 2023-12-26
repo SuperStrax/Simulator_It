@@ -22,7 +22,12 @@ public class AccessCheck : MonoBehaviour
     public void Accept()
     {
         if (targetAccess.GetComponent<Image>().color == new Color32(0, 0, 0, 150))
+        {
             complete.SetActive(true);
+            Progress.Instance.sysLevelsComplete[3] = true;
+            Progress.Instance.techStat = Progress.Instance.sysStatCalc();
+            Progress.Instance.SaveStat();
+        }
         else
             warning.SetActive(true);
     }

@@ -10,6 +10,11 @@ public class ConnectingCheck : MonoBehaviour
     void Update()
     {
         if (line1 == null && line2 == null && line3 == null)
+        {
             ending.SetActive(true);
+            Progress.Instance.sysLevelsComplete[2] = true;
+            Progress.Instance.techStat = Progress.Instance.sysStatCalc();
+            Progress.Instance.SaveStat();
+        }
     }
 }
