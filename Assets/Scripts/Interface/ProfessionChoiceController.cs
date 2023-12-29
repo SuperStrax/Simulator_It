@@ -10,12 +10,10 @@ public class ProfessionChoiceController : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(Progress.Instance.GetPlayerId());
-        Progress.Instance.GetPlayerId();
         Progress.Instance.LoadStat();
-        techStat.text = Progress.Instance.techStat + "/5";
-        progStat.text = Progress.Instance.progStat + "/5";
-        sysStat.text = Progress.Instance.sysStat + "/5";
+        techStat.text = Progress.Instance.techStatCalc() + "/5";
+        progStat.text = Progress.Instance.progStatCalc() + "/5";
+        sysStat.text = Progress.Instance.sysStatCalc() + "/5";
     }
 
     public void techinicianStart()

@@ -16,6 +16,8 @@ public class InterfaceController : MonoBehaviour
     void Start()
     {
         InvokeRepeating("ShowCasualThings", 60, 60);
+        Progress.Instance.lastScene = thisLevel;
+        StartCoroutine(Progress.Instance.SaveLevel());
     }
 
     void ShowCasualThings()

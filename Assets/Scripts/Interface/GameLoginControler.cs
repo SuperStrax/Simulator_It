@@ -18,13 +18,14 @@ public class GameLoginControler : MonoBehaviour
     public string accessToken;
     public string username;
     string password;
+    public GameObject loading;
+    public GameObject warning;
 
     public void Awake()
     {
         if (LoginController == null)
         {
             transform.parent = null;
-            DontDestroyOnLoad(gameObject);
             LoginController = this;
         }
         else
@@ -44,9 +45,16 @@ public class GameLoginControler : MonoBehaviour
         public string username;
         public string password;
         public string gender = "male";
-        public string isAdmin = "false";
+        public bool isAdmin = true;
     }
 
+    [System.Serializable]
+    class SignInAnwer
+    {
+        public string type;
+        public string token;
+        public string refreshToken;
+    }
 
     IEnumerator SignUpRequest()
     {
@@ -82,11 +90,32 @@ public class GameLoginControler : MonoBehaviour
         using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8081/api/account/signin", jsonData, "application/json"))
         {
             yield return www.SendWebRequest();
-            int tokenIndex1 = www.downloadHandler.text.LastIndexOf("token");
-            int tokenIndex2 = www.downloadHandler.text.LastIndexOf("refreshToken");
-            accessToken = www.downloadHandler.text.Substring(tokenIndex1 + 8, tokenIndex2 - 29);
-            www.Dispose();
+            if (www.result == UnityWebRequest.Result.Success)
+            {
+                SignInAnwer answer = JsonUtility.FromJson<SignInAnwer>(www.downloadHandler.text);
+                Progress.Instance.accessToken = answer.token;
+                Progress.Instance.refreshToken = answer.refreshToken;
+                StartCoroutine(Progress.Instance.GetPlayerId());
+                www.Dispose();
+            }
+            else
+            {
+                warning.SetActive(true);
+            }
         }
+    }
+
+    IEnumerator Loading()
+    {
+        warning.SetActive(false);
+        usernameLine.SetActive(false);
+        passwordLine.SetActive(false);
+        signinComplete.SetActive(false);
+        backButton.SetActive(false);
+        loading.SetActive(true);
+        yield return new WaitForSeconds(4);
+        Progress.Instance.LoadStat();
+        SceneManager.LoadScene(28);
     }
 
     public void SignUpClick()
@@ -112,15 +141,11 @@ public class GameLoginControler : MonoBehaviour
     public void SignUp()
     {
         StartCoroutine(SignUpRequest());
-        SignUpRequest();
-        SceneManager.LoadScene(28);
     }
 
     public void SignIn()
     {
         StartCoroutine(SignInRequest());
-        SignInRequest();
-        SceneManager.LoadScene(28);
     }
 
     public void Back()

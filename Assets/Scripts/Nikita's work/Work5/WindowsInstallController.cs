@@ -15,8 +15,7 @@ public class WindowsInstallController : MonoBehaviour
         yield return new WaitForSeconds(1);
         windows.SetActive(true);
         complete.SetActive(true);
-        Progress.Instance.sysLevelsComplete[4] = true;
-        Progress.Instance.techStat = Progress.Instance.sysStatCalc();
+        Progress.Instance.levelsComplete[14] = true;
         Progress.Instance.SaveStat();
     }
 

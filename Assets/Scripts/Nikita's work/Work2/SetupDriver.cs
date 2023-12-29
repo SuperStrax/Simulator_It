@@ -12,8 +12,7 @@ public class SetupDriver : MonoBehaviour
         setupWindow.SetActive(true);
         dialogue.SetActive(true);
         backButton.SetActive(false);
-        Progress.Instance.sysLevelsComplete[1] = true;
-        Progress.Instance.techStat = Progress.Instance.sysStatCalc();
+        Progress.Instance.levelsComplete[11] = true;
         Progress.Instance.SaveStat();
     }
 

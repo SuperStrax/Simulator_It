@@ -10,8 +10,7 @@ public class CompleteCheck : MonoBehaviour
         if (connectCount == 4)
         {
             SceneManager.LoadScene(17);
-            Progress.Instance.sysLevelsComplete[0] = true;
-            Progress.Instance.techStat = Progress.Instance.sysStatCalc();
+            Progress.Instance.levelsComplete[10] = true;
             Progress.Instance.SaveStat();
         }
     }

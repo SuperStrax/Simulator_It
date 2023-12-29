@@ -44,8 +44,7 @@ public class CartridgeMove : MonoBehaviour
                 dialogue.numberDialog = 0;
                 printer.GetComponent<CartridgeInsert>().cartridgeDelete();
                 dialogue.gameObject.SetActive(true);
-                Progress.Instance.techLevelsComplete[1] = true;
-                Progress.Instance.techStat = Progress.Instance.techStatCalc();
+                Progress.Instance.levelsComplete[1] = true;
                 Progress.Instance.SaveStat();
             }
         }

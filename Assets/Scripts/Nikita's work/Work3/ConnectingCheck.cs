@@ -12,8 +12,7 @@ public class ConnectingCheck : MonoBehaviour
         if (line1 == null && line2 == null && line3 == null)
         {
             ending.SetActive(true);
-            Progress.Instance.sysLevelsComplete[2] = true;
-            Progress.Instance.techStat = Progress.Instance.sysStatCalc();
+            Progress.Instance.levelsComplete[12] = true;
             Progress.Instance.SaveStat();
         }
     }

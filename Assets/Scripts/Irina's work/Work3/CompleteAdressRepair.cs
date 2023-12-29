@@ -46,8 +46,7 @@ public class CompleteAdressRepair : MonoBehaviour
             if (completed)
             {
                 Complete();
-                Progress.Instance.progLevelsComplete[2] = true;
-                Progress.Instance.techStat = Progress.Instance.progStatCalc();
+                Progress.Instance.levelsComplete[7] = true;
                 Progress.Instance.SaveStat();
             }
             else

@@ -31,8 +31,7 @@ public class ColorChoiceComplete : MonoBehaviour
             if (whiteLinesCount == 6)
             {
                 complete.SetActive(true);
-                Progress.Instance.progLevelsComplete[3] = true;
-                Progress.Instance.techStat = Progress.Instance.progStatCalc();
+                Progress.Instance.levelsComplete[8] = true;
                 Progress.Instance.SaveStat();
             }
             else

@@ -39,8 +39,7 @@ public class SiteRepairController : MonoBehaviour
         else
         {
             complete.SetActive(true);
-            Progress.Instance.progLevelsComplete[1] = true;
-            Progress.Instance.techStat = Progress.Instance.progStatCalc();
+            Progress.Instance.levelsComplete[6] = true;
             Progress.Instance.SaveStat();
         }
     }

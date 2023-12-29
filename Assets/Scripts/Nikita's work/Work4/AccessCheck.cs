@@ -24,8 +24,7 @@ public class AccessCheck : MonoBehaviour
         if (targetAccess.GetComponent<Image>().color == new Color32(0, 0, 0, 150))
         {
             complete.SetActive(true);
-            Progress.Instance.sysLevelsComplete[3] = true;
-            Progress.Instance.techStat = Progress.Instance.sysStatCalc();
+            Progress.Instance.levelsComplete[13] = true;
             Progress.Instance.SaveStat();
         }
         else
