@@ -400,6 +400,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 9bd1645d1b7674740b053b8852d45803, type: 3}
+    - target: {fileID: 8499886976853879666, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
+      propertyPath: videoFileName
+      value: tech1.mp4
+      objectReference: {fileID: 0}
     - target: {fileID: 8933007362975973542, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
       propertyPath: m_IsActive
       value: 0

@@ -30,4 +30,9 @@ public class ProfessionChoiceController : MonoBehaviour
     {
         SceneManager.LoadScene(15);
     }
+
+    public void Back()
+    {
+        SceneManager.LoadScene(28);
+    }
 }

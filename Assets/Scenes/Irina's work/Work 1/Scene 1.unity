@@ -391,7 +391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8499886976853879666, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
       propertyPath: videoFileName
-      value: Prog1.mp4
+      value: prog1.mp4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

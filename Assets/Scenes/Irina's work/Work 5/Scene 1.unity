@@ -4135,6 +4135,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 869529202}
     - target: {fileID: 4468242476229622245, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
+      propertyPath: nextLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468242476229622245, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
       propertyPath: thisLevel
       value: 25
       objectReference: {fileID: 0}
@@ -4245,6 +4249,10 @@ PrefabInstance:
     - target: {fileID: 8051501350179549081, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
       propertyPath: m_Name
       value: Interface
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499886976853879666, guid: 76fbca732a44c2340b9986564d6dada7, type: 3}
+      propertyPath: videoFileName
+      value: prog5.mp4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
