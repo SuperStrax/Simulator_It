@@ -69,7 +69,7 @@ public class GameLoginControler : MonoBehaviour
         jsonData = JsonUtility.ToJson(signUpData);
 
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8081/api/account/signup", jsonData, "application/json"))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://94.241.169.172:8080/api/account/signup", jsonData, "application/json"))
         {
             yield return www.SendWebRequest();
             warning.GetComponent<TextMeshProUGUI>().text = "Регистрация прошла успешно, вернитесь в меню и войдите в аккаунт.";
@@ -88,7 +88,7 @@ public class GameLoginControler : MonoBehaviour
         signInData.password = password;
         jsonData = JsonUtility.ToJson(signInData);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8081/api/account/signin", jsonData, "application/json"))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://94.241.169.172:8080/api/account/signin", jsonData, "application/json"))
         {
             warning.GetComponent<TextMeshProUGUI>().text = "Пожалуйста, подождите...";
             yield return www.SendWebRequest();

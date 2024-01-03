@@ -50,7 +50,7 @@ public class Progress : MonoBehaviour
 
     public IEnumerator GetPlayerId()
     {
-        using (UnityWebRequest www = UnityWebRequest.Get("http://localhost:8081/api/account/me"))
+        using (UnityWebRequest www = UnityWebRequest.Get("http://94.241.169.172:8080/api/account/me"))
         {
             www.SetRequestHeader("Authorization", "Bearer " + accessToken);
             yield return www.SendWebRequest();
@@ -128,7 +128,7 @@ public class Progress : MonoBehaviour
         save.description = SaveToString(levelsComplete);
         string jsonData = JsonUtility.ToJson(save);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8081/api/profession/new", jsonData, "application/json"))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://94.241.169.172:8080/api/profession/new", jsonData, "application/json"))
         {
             www.SetRequestHeader("Authorization", "Bearer " + accessToken);
             yield return www.SendWebRequest();
@@ -146,7 +146,7 @@ public class Progress : MonoBehaviour
 
     IEnumerator GetSaveRequest()
     {
-        using (UnityWebRequest www = UnityWebRequest.Get("http://localhost:8081/api/profession"))
+        using (UnityWebRequest www = UnityWebRequest.Get("http://94.241.169.172:8080/api/profession"))
         {
             www.SetRequestHeader("Authorization", "Bearer " + accessToken);
             yield return www.SendWebRequest();
@@ -181,7 +181,7 @@ public class Progress : MonoBehaviour
 
     public IEnumerator GetLastScene()
     {
-        using (UnityWebRequest www = UnityWebRequest.Get("http://localhost:8081/api/profession"))
+        using (UnityWebRequest www = UnityWebRequest.Get("http://94.241.169.172:8080/api/profession"))
         {
             www.SetRequestHeader("Authorization", "Bearer " + accessToken);
             yield return www.SendWebRequest();
@@ -221,7 +221,7 @@ public class Progress : MonoBehaviour
         save.description = Convert.ToString(lastScene);
         string jsonData = JsonUtility.ToJson(save);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8081/api/profession/new", jsonData, "application/json"))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://94.241.169.172:8080/api/profession/new", jsonData, "application/json"))
         {
             www.SetRequestHeader("Authorization", "Bearer " + accessToken);
             yield return www.SendWebRequest();
