@@ -19,7 +19,7 @@ public class GameLoginControler : MonoBehaviour
     public string username;
     string password;
     public GameObject loading;
-    public GameObject warning;
+    public GameObject warning1, warning2, warning3, warning4;
 
     public void Awake()
     {
@@ -69,11 +69,24 @@ public class GameLoginControler : MonoBehaviour
         jsonData = JsonUtility.ToJson(signUpData);
 
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://94.241.169.172:8080/api/account/signup", jsonData, "application/json"))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://94.241.169.172:8081/api/account/signup", jsonData, "application/json"))
         {
             yield return www.SendWebRequest();
-            warning.GetComponent<TextMeshProUGUI>().text = "Регистрация прошла успешно, вернитесь в меню и войдите в аккаунт.";
-            www.Dispose();
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                warning1.SetActive(false);
+                warning2.SetActive(false);
+                warning3.SetActive(true);
+                warning4.SetActive(false);
+            }
+            else
+            {
+                warning1.SetActive(false);
+                warning2.SetActive(true);
+                warning3.SetActive(false);
+                warning4.SetActive(false);
+                www.Dispose();
+            }
         }
     }
 
@@ -88,13 +101,19 @@ public class GameLoginControler : MonoBehaviour
         signInData.password = password;
         jsonData = JsonUtility.ToJson(signInData);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://94.241.169.172:8080/api/account/signin", jsonData, "application/json"))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://94.241.169.172:8081/api/account/signin", jsonData, "application/json"))
         {
-            warning.GetComponent<TextMeshProUGUI>().text = "Пожалуйста, подождите...";
+            warning1.SetActive(true);
+            warning2.SetActive(false);
+            warning3.SetActive(false);
+            warning4.SetActive(false);
             yield return www.SendWebRequest();
             if (www.result != UnityWebRequest.Result.Success)
             {
-                warning.GetComponent<TextMeshProUGUI>().text = "Неверный логин или пароль, повторите попытку.";
+                warning1.SetActive(false);
+                warning2.SetActive(false);
+                warning3.SetActive(false);
+                warning4.SetActive(true);
             }
             else
             {
@@ -110,7 +129,10 @@ public class GameLoginControler : MonoBehaviour
 
     IEnumerator Loading()
     {
-        warning.SetActive(false);
+        warning1.SetActive(false);
+        warning2.SetActive(false);
+        warning3.SetActive(false);
+        warning4.SetActive(false);
         usernameLine.SetActive(false);
         passwordLine.SetActive(false);
         signinComplete.SetActive(false);
@@ -162,6 +184,9 @@ public class GameLoginControler : MonoBehaviour
         passwordLine.SetActive(false);
         signupComplete.SetActive(false);
         signinComplete.SetActive(false);
-        warning.GetComponent<TextMeshProUGUI>().text = "";
+        warning1.SetActive(false);
+        warning2.SetActive(false);
+        warning3.SetActive(false);
+        warning4.SetActive(false);
     }
 }
