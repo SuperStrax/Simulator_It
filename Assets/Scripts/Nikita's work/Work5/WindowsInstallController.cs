@@ -13,6 +13,7 @@ public class WindowsInstallController : MonoBehaviour
     IEnumerator Waiter()
     {
         yield return new WaitForSeconds(1);
+        Destroy(warning);
         windows.SetActive(true);
         complete.SetActive(true);
         Progress.Instance.levelsComplete[14] = true;

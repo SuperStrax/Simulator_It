@@ -23,6 +23,7 @@ public class AccessCheck : MonoBehaviour
     {
         if (targetAccess.GetComponent<Image>().color == new Color32(0, 0, 0, 150))
         {
+            Destroy(warning);
             complete.SetActive(true);
             Progress.Instance.levelsComplete[13] = true;
             Progress.Instance.SaveStat();

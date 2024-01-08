@@ -73,6 +73,7 @@ public class Repair : MonoBehaviour
                     return;
                 }
             }
+            Destroy(warning);
             ending.SetActive(true);
             Progress.Instance.levelsComplete[5] = true;
             Progress.Instance.SaveStat();

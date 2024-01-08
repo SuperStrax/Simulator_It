@@ -39,6 +39,7 @@ public class SiteRepairController : MonoBehaviour
         else
         {
             complete.SetActive(true);
+            Destroy(warning);
             Progress.Instance.levelsComplete[6] = true;
             Progress.Instance.SaveStat();
         }
