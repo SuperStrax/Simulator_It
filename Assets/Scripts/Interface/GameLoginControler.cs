@@ -20,6 +20,7 @@ public class GameLoginControler : MonoBehaviour
     string password;
     public GameObject loading;
     public GameObject warning1, warning2, warning3, warning4;
+    public string url = "http://94.241.169.172:8081";
 
     public void Awake()
     {
@@ -69,7 +70,7 @@ public class GameLoginControler : MonoBehaviour
         jsonData = JsonUtility.ToJson(signUpData);
 
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://94.241.169.172:8081/api/account/signup", jsonData, "application/json"))
+        using (UnityWebRequest www = UnityWebRequest.Post(url + "/api/account/signup", jsonData, "application/json"))
         {
             yield return www.SendWebRequest();
             if (www.result != UnityWebRequest.Result.Success)
@@ -101,7 +102,7 @@ public class GameLoginControler : MonoBehaviour
         signInData.password = password;
         jsonData = JsonUtility.ToJson(signInData);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://94.241.169.172:8081/api/account/signin", jsonData, "application/json"))
+        using (UnityWebRequest www = UnityWebRequest.Post(url + "/api/account/signin", jsonData, "application/json"))
         {
             warning1.SetActive(true);
             warning2.SetActive(false);

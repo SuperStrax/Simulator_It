@@ -50,7 +50,7 @@ public class Progress : MonoBehaviour
 
     public IEnumerator GetPlayerId()
     {
-        using (UnityWebRequest www = UnityWebRequest.Get("http://94.241.169.172:8081/api/account/me"))
+        using (UnityWebRequest www = UnityWebRequest.Get(GameLoginControler.LoginController.url + "/api/account/me"))
         {
             www.SetRequestHeader("Authorization", "Bearer " + accessToken);
             yield return www.SendWebRequest();
@@ -128,7 +128,7 @@ public class Progress : MonoBehaviour
         save.description = SaveToString(levelsComplete);
         string jsonData = JsonUtility.ToJson(save);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://94.241.169.172:8081/api/profession/new", jsonData, "application/json"))
+        using (UnityWebRequest www = UnityWebRequest.Post(GameLoginControler.LoginController.url + "/api/profession/new", jsonData, "application/json"))
         {
             www.SetRequestHeader("Authorization", "Bearer " + accessToken);
             yield return www.SendWebRequest();
@@ -146,13 +146,12 @@ public class Progress : MonoBehaviour
 
     IEnumerator GetSaveRequest()
     {
-        using (UnityWebRequest www = UnityWebRequest.Get("http://94.241.169.172:8081/api/profession"))
+        using (UnityWebRequest www = UnityWebRequest.Get(GameLoginControler.LoginController.url + "/api/profession"))
         {
             www.SetRequestHeader("Authorization", "Bearer " + accessToken);
             yield return www.SendWebRequest();
             RootObject answer = new RootObject();
             answer = JsonUtility.FromJson<RootObject>("{\"saves\":" + www.downloadHandler.text + "}");
-            Debug.Log(www.downloadHandler.text);
             if (www.downloadHandler.text.IndexOf(playerId + "save") > -1)
             {
                 foreach(GetSaveAnswer saveAnswer in answer.saves)
@@ -181,7 +180,7 @@ public class Progress : MonoBehaviour
 
     public IEnumerator GetLastScene()
     {
-        using (UnityWebRequest www = UnityWebRequest.Get("http://94.241.169.172:8081/api/profession"))
+        using (UnityWebRequest www = UnityWebRequest.Get(GameLoginControler.LoginController.url + "/api/profession"))
         {
             www.SetRequestHeader("Authorization", "Bearer " + accessToken);
             yield return www.SendWebRequest();
@@ -189,7 +188,6 @@ public class Progress : MonoBehaviour
             answer = JsonUtility.FromJson<RootObject>("{\"saves\":" + www.downloadHandler.text + "}");
             if (www.downloadHandler.text.IndexOf(playerId + "levelSave") > -1)
             {
-                Debug.Log("Метод запущен");
                 foreach (GetSaveAnswer saveAnswer in answer.saves)
                 {
                     if (saveAnswer.name.IndexOf(playerId + "levelSave") > -1)
@@ -197,7 +195,6 @@ public class Progress : MonoBehaviour
                         int maxVersion = int.MinValue;
                         int index = saveAnswer.name.LastIndexOf("levelSave");
                         int saveVersion = Convert.ToInt32(saveAnswer.name.Substring(index + 9));
-                        Debug.Log(saveVersion);
                         if (saveVersion > maxVersion)
                         {
                             maxVersion = saveVersion;
@@ -221,7 +218,7 @@ public class Progress : MonoBehaviour
         save.description = Convert.ToString(lastScene);
         string jsonData = JsonUtility.ToJson(save);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://94.241.169.172:8081/api/profession/new", jsonData, "application/json"))
+        using (UnityWebRequest www = UnityWebRequest.Post(GameLoginControler.LoginController.url + "/api/profession/new", jsonData, "application/json"))
         {
             www.SetRequestHeader("Authorization", "Bearer " + accessToken);
             yield return www.SendWebRequest();
@@ -231,15 +228,22 @@ public class Progress : MonoBehaviour
 
     public void Continue()
     {
-        if(lastScene != 0)
-        SceneManager.LoadScene(lastScene);
+        if (lastScene != 0)
+        {
+            if (lastScene == 18)
+                PrinterProblemController.changeScene = false;
+            SceneManager.LoadScene(lastScene);
+        }
     }
 
     public void LoadStat()
     {
+      /*  foreach(bool level in levelsComplete)
+        {
+            Debug.Log(level);
+        }*/
         StartCoroutine(GetSaveRequest());
         StartCoroutine(GetLastScene());
-        GetLastScene();
     }
 
     public void SaveStat()

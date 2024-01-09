@@ -1408,7 +1408,7 @@ MonoBehaviour:
   login: {fileID: 1264466048}
   password: {fileID: 980455868}
   dialogue: {fileID: 0}
-  correctLogin: adminCJcompany
+  correctLogin: adminJCcompany
   correctPassword: 1234567890admin
 --- !u!1 &519420028
 GameObject:
@@ -3205,7 +3205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   login: {fileID: 1035438042}
   password: {fileID: 1967428122}
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 1965154384}
   correctLogin: krissCJcompany
   correctPassword: 123123123
 --- !u!1 &903924449
@@ -5854,6 +5854,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1 &1965154384 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3817446683148332119, guid: 7ace6a6479b2a1e45bcd82c0f1a44f58, type: 3}
+  m_PrefabInstance: {fileID: 657513640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1967428122
 GameObject:
   m_ObjectHideFlags: 0

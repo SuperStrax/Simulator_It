@@ -7,7 +7,7 @@ public class PrinterProblemController : MonoBehaviour
     public GameObject dialogue;
     public Button printerButton;
     public Button monitorButton;
-    static bool changeScene;
+    public static bool changeScene;
 
     public void PrinterZoom()
     {

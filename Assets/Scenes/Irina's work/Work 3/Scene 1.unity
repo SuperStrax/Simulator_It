@@ -273,6 +273,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47618517}
   m_CullTransparentMesh: 1
+--- !u!1 &50081833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3817446683148332119, guid: 7ace6a6479b2a1e45bcd82c0f1a44f58, type: 3}
+  m_PrefabInstance: {fileID: 788932416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &52593820
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,7 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee5ea7a46c1bc842a9093d94338955f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 50081833}
   targets:
   - {fileID: 1021954111}
   - {fileID: 1432562414}
@@ -1378,7 +1383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee5ea7a46c1bc842a9093d94338955f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 50081833}
   targets:
   - {fileID: 1021954111}
   - {fileID: 1432562414}
@@ -2576,7 +2581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee5ea7a46c1bc842a9093d94338955f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 50081833}
   targets:
   - {fileID: 1021954111}
   - {fileID: 1432562414}
@@ -3745,7 +3750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee5ea7a46c1bc842a9093d94338955f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 50081833}
   targets:
   - {fileID: 1021954111}
   - {fileID: 1432562414}
@@ -4489,7 +4494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee5ea7a46c1bc842a9093d94338955f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 50081833}
   targets:
   - {fileID: 1021954111}
   - {fileID: 1432562414}

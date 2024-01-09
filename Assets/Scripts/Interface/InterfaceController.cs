@@ -31,6 +31,8 @@ public class InterfaceController : MonoBehaviour
 
     public void NextLevel()
     {
+        if (nextLevel == 18)
+            PrinterProblemController.changeScene = false;
         SceneManager.LoadScene(nextLevel);
     }
 
